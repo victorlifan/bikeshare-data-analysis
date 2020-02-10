@@ -9,7 +9,7 @@ In this project, I made use of Python to explore data related to bike share syst
 
 
 ### Software used
-+ Python 3.7 (Pandas/Numpy)
++ Python 3.7 (Pandas/ Numpy)
 + Anaconda
 + Atom
 + Jupyter Notebook
