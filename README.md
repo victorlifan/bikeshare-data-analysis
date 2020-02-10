@@ -8,6 +8,8 @@ Project is created on Feb 7th 2020.
 In this project, I made use of Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. I wrote code to import the data and answer interesting questions about it by computing descriptive statistics. I also wrote a script that takes in raw input to create an interactive experience in the terminal to present these statistics.
 
 
+### About
+Main body of the project is "bikeshare.py". While other *.py files are components of the project as their named.
 ### Software used
 + Python 3.7 (Pandas/ Numpy)
 + Anaconda
