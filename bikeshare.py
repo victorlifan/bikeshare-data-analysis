@@ -1,10 +1,12 @@
 import time
 import pandas as pd
-import numpy as np
+
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
+MONTH_DATA = ['january','february','march','april','may','june']
 
 def get_filters():
     """
@@ -27,7 +29,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month = input('''Enter 'all' if you want to see data from all the months\nor specify the month you want to know (upto june):''')
     while True:
-        if month in ['all','january','february','march','april','may','june']:
+        if month in MONTH_DATA or month == 'all':
             break
         else:
             month = input('''Please enter 'all' or enter one month (upto june) you like to know in lowercase unabbreviated format:''')
@@ -81,8 +83,7 @@ def load_data(city, month, day):
     # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month)+1
+        month = MONTH_DATA.index(month)+1
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
@@ -103,8 +104,7 @@ def time_stats(df):
 
     # display the most common month
     com_month_num = df['month'].mode()[0]
-    com_month_name = ['january','february','march','april','may','june']
-    print('The most popular month is: ',com_month_name[com_month_num-1])
+    print('The most popular month is: ',MONTH_DATA[com_month_num-1])
     # display the most common day of week
     com_day = df['day_of_week'].mode()[0]
     print('The most popular hour day: ',com_day)
@@ -188,7 +188,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+# main function
 def main():
     while True:
         city, month, day = get_filters()
