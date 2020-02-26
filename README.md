@@ -9,7 +9,9 @@ In this project, I made use of Python to explore data related to bike share syst
 
 
 ### About
-Main body of the project is "bikeshare.py". While other *.py files are components of the project as their named.
++ Main body of the project is "bikeshare.py".
++ Other *.py files are components of the project as their named.
++ city_data.zip file contains three cities' data in csv form that are used in this project.
 ### Software used
 + Python 3.7 (Pandas/ Numpy)
 + Anaconda
